@@ -2,7 +2,7 @@ PODS:
   - Flutter (1.0.0)
   - integration_test (0.0.1):
     - Flutter
-  - sshvpn_flutter (0.0.1):
+  - sshvpn_flutter (1.0.0):
     - Flutter
 
 DEPENDENCIES:
@@ -21,8 +21,8 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
   integration_test: ce0a3ffa1de96d1a89ca0ac26fca7ea18a749ef4
-  sshvpn_flutter: 27b21f204bfcf43a5ac52850d237503307373bf6
+  sshvpn_flutter: 778bb7ec647d4fce64754b25fe79f264d9cbaa83
 
-PODFILE CHECKSUM: 6e700dec67e6deac9b1c69bb14c49a2217a12d15
+PODFILE CHECKSUM: 819463e6a0290f5a72f145ba7cde16e8b6ef0796
 
 COCOAPODS: 1.15.2
