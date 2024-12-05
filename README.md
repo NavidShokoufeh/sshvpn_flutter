@@ -60,7 +60,7 @@ $(SRCROOT)/.symlinks/plugins/sshvpn_flutter/ios/include
 
 ### <b>5. Copy Paste</b>
 
-Open sshvpn_extension > PacketTunnelProvider.m and copy paste this script <a href="https://raw.githubusercontent.com/NavidShokoufeh/sshvpn_flutter/refs/heads/main/example/ios/sshvpn_extension/PacketTunnelProvider.m">PacketTunnelProvider.m</a>
+Open sshvpn_extension > PacketTunnelProvider.m and copy paste this script <a href="https://raw.githubusercontent.com/NavidShokoufeh/sshvpn_flutter/refs/heads/main/example/ios/ssh_extension/PacketTunnelProvider.m">PacketTunnelProvider.m</a>
 
 # Usage
 
