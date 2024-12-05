@@ -11,22 +11,28 @@ typedef OnError = Function();
 class SshvpnFlutter {
   MethodChannel channel = const MethodChannel("responseReceiver");
 
+  /// Starts connection between client and provided [SSHServer]
+  /// Before try to connect , make sure you have called [setup] metthod
   Future<bool?> connect() {
     return SshvpnFlutterPlatform.instance.connect();
   }
 
+  /// Disconnects current running ssh connection
   Future<bool?> disconnect() {
     return SshvpnFlutterPlatform.instance.disconnect();
   }
 
+  /// Sets provided [SSHServer] and registers your application as vpn in user's phone settings
   Future<bool?> setup({required SSHServer server}) {
     return SshvpnFlutterPlatform.instance.setup(server: server);
   }
 
+  /// Returns last connection status
   Future<String?> lastStatus() {
     return SshvpnFlutterPlatform.instance.lastStatus();
   }
 
+  /// As the status changed , it gets called
   Future onStatusChanged({
     OnConnected? onConnectedResult,
     OnConnecting? onConnectingResult,
