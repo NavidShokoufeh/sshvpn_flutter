@@ -1,6 +1,6 @@
 #import "SshvpnFlutterPlugin.h"
-#import "NodeModel.h"
-#import "CheckConnectData.h"
+#import "vpn_adapter_ios/NodeModel.h"
+#import "vpn_adapter_ios/CheckConnectData.h"
 #import <ExtParser/ExtParser.h>
 #import <SshLib/SshLib.h>
 

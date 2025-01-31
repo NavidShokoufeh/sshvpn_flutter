@@ -18,12 +18,10 @@ A new Flutter plugin project.
   s.static_framework = true
   s.dependency 'Flutter'
   s.platform = :ios, '15.0'
-  s.preserve_path = ['include/ExtParser.framework','include/openconnect.framework','include/SshLib.framework']
-  s.vendored_frameworks  = ['include/ExtParser.framework','include/openconnect.framework','include/SshLib.framework']
-
   s.vendored_libraries = "**/*.a"
+  s.dependency 'vpn_adapter_ios', '~> 1.0.0'
 
 
   # Flutter.framework does not contain a i386 slice.
-  s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES', 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386','OTHER_LDFLAGS' => ['-framework ExtParser','-framework openconnect','-framework sshlib' ,'-ltun2socks'] ,"LIBRARY_SEARCH_PATHS" => 'include/' }
+  s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES', 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386'}
 end
