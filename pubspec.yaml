@@ -1,6 +1,6 @@
 name: sshvpn_flutter
 description: "A Flutter plugin for managing SSH VPN connections"
-version: 1.0.0
+version: 1.2.0
 homepage: https://github.com/NavidShokoufeh/sshvpn_flutter
 
 environment:

@@ -50,14 +50,27 @@ Click + button on bottom left, Choose <b>NETWORK EXTENSION</b>. And set <b>Langu
 
 Repeat the step 1 for new target you created on previous step (sshvpn_extension)
 
-### <b>4. Add Framework Search Path</b>
+### <b>4. Add Pod dependency</b>
 
-Select sshvpn_extension and add the following lines to your <b>Build Setting</b> > <b>Framework Search Path</b>:
+Open your Podfile , and add the following lines:
 
 ```
-$(SRCROOT)/.symlinks/plugins/sshvpn_flutter/ios/include
+target 'sshvpn_extension' do
+  pod 'vpn_adapter_ios', :git => 'https://github.com/NavidShokoufeh/vpn_adapter_ios.git', :tag => '1.0.0'
+end
 ```
 
+And in your runner target do the same :
+
+```
+target 'Runner' do
+pod 'vpn_adapter_ios', :git => 'https://github.com/NavidShokoufeh/vpn_adapter_ios.git', :tag => '1.0.0' <-- Add this line
+  flutter_install_all_ios_pods File.dirname(File.realpath(__FILE__))
+  target 'RunnerTests' do
+    inherit! :search_paths
+  end
+end
+```
 ### <b>5. Copy Paste</b>
 
 Open sshvpn_extension > PacketTunnelProvider.m and copy paste this script <a href="https://raw.githubusercontent.com/NavidShokoufeh/sshvpn_flutter/refs/heads/main/example/ios/ssh_extension/PacketTunnelProvider.m">PacketTunnelProvider.m</a>
